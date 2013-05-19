@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name			sengokuixa-moko
 // @description	戦国IXA用ツール
-// @version		2.0.5.3
+// @version		2.0.5.5
 // @namespace		sengokuixa-ponpoko
 // @author		nameless, osafune, sengokuixa-moko
 // @match			http://*.sengokuixa.jp/*
@@ -23,7 +23,7 @@
 		function Moko_main($) {
 			'use strict';
 			var TOOL_NAME = "戦国IXA用ツール",
-			VERSION_NAME = "ver 2.0.5.3",
+			VERSION_NAME = "ver 2.0.5.5",
 				//タブ
 			options_grp = {
 				all: '全般1', all2: '全般2', chat: 'チャット', deck: '部隊', unit: '兵士編成' ,map: '地図',
@@ -169,7 +169,7 @@
 			OPTION_TAG = 'ixa_moko_options',
 			OPTION_PREFIX = 'ixa_moko_',
 			//グループ：デフォルト枠
-			groups_def = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+			groups_def = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
 			//グループ：HP100未満の背景色(100枚表示まで)
 			groupsx_def = ['#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600', '#600'],
 			//グループ：アイコン デフォルト
@@ -219,6 +219,7 @@
 				"data:image/png;base64,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",
 				"data:image/png;base64,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",
 				"data:image/png;base64,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",
+				"data:image/png;base64,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",
 				"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAATTSURBVHjatFZrbBRVFJ5XW2oL7RANlGrbHSiSFLYrY0xI0WKcBF1S0kQW1MSgibbEYEr8s4uE0JqI2z8mxNiErUZLMCoDkdUKEiaWhq5pSDfa1fCocbq7LbZIZHZtkba4O55778zs7KNEfzC5md65e/udc7/znXMuRd23h0Yvx67/sFO3XtafDAhtQlnP+JfcPYH0QvM8XGvQtN0AUwBUJyOFxz9U+i6VXsBjHo3UApWa58tZaZMDJmhdv4t2UmlsPmOYK+QubEqb0Glp81pxwyNq7KZQ8yBf8YDorIUd8OYrymCx3XdcGRqjmCKK4ZDXOm35ncM18pdfVuxxbxDXV0ub1wFcQb7Co6rYKJB54Phg+/4vMHoRRbMUzSzGtQ6g3j3PLAYKjzI46uvqG/n+ffKpxqYRbzqbEwYmlw1dV4audvecM737bfnqlwzvPj2rXPgRJoiWxjrTTKT7gyAiMDe8OVzTxgY1fpMsCLUrtFsJw7vodb6yDBHtqj/qqieLcnAIxxxDw5smkaQLKQSTr1y8Qr74yvKRgSPmvEwZCNv3aolZORjK4OppQ13YwewwEs2BnlJzI2f2i04H+X/lQtjT2gxz36Fe+BctMRPoOwvhEhzVguNhii4K/3Jdm01RTDHFFqNIgsfRExa0bsqOQM97nnOe6H1TjU77OnuF2pX+rtexmRlYEU02Mu4nb/sOnwp8PoxFwiH0qGxCk1OQHEktiOurpKZ6794WICRfIWp0CgyAiqVmlx39cfdhdfIvQ4LRk5ylDKGGFxtWSU1rIEeEmofyEeXTg1ridtsrbr5yqRw8Geg7hzipq5Ke3ig95eL5cr6ilJpI4GAyFtc7wWvw9Oi7OyDxbN5Nq9HfpS0bCRWrXbu15B3vvp3+Q69ibYR87xxTY3/gPORwymCu4Q2fsVMsjn0DeD11IyH3hzVthiTLvrc/Cg3/3LGnlZjZvuvg5bFJOGno0tWpG1rL1ica1tV0tLesWsFfvhbXkn9TDItTkcUThkpesby2AojkwS9l/QdeaNu9lfgLVMAJwE0oGp7WJ4W6lZ7tTaJrjS0/I90f9qNiwpYgr+EEsa8KQHvcTv8BDyTL/6398jeXfO8F1ckkgo6fzhACw+NuPNLp8e7dVlAYdoVAkEqXFOesNzxaPTe3oITGMCHXMone9uImv3cb1AeQkfz1MATQf/BlVDo+6ccyEK2dsAKfJLy+zo+hCvLLK4W6anXilnxmFBGSU0NA8IHPLhJdQ8mXmtZaOhEcVYjQgbBpQDebDqqC4UgMC6PElAdDxMdl9SEaF0YQE5UGF8gP/q7XzCo4RqD9XW2Zwh0Zp9glGdmRfLGVJ7OzIYMsgmaK1AktL5vvQD3JLtw/mXIuQV4TRZvdgLOVUwxNkghejHHkwLHz7W/1SM1OqN1q/E9QDrQub8fz+BzjBiLxF7nMmF3YToiBTuHGjAjt7vnO+8azqMBypUroV/hB/nYUuIKElrY8Bg0MLGV4sHevRe8hRjuHRo7bOerWlnkaBzDNLyuFzhuOxLWZeROas1he/B5i3FeAcQvLfo9BVV+bTSs/qOgTEcIaNTr7lsMtcqViDCA4IIG2X1+MTqgb3dVQG33P3pjVJBnc6Kx7BZ3pnkSjWSbpPOT7+fwrwACXJTfVs0EoKwAAAABJRU5ErkJggg==",
 				"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAUQSURBVHjatFZfTFtVGD/33Nvblv8XCJM4ZVTmCNER120ymMRNGLg4E6PtHn3QlGTvpvXJGB9so8bEF4Vs0cQHlWYxi3NmozrmMpys3ZyBqVM7MoITGNxFRilt771+3/1uSy8dxpedHA7nnvOd3/md3/m+75Sx+1YEbL44tn7YMKyOTh0DLcFWMO2hJQNo4b+h0zwTuGUD9fAr0oabAqiuW5WWco5V5CUGGvY5GYhmi/P/Aa2zXM5bU6GIPDY9a610OHAJrBcsg2DbFugMTSbVlSwTRTRwSEwQN4CGYwILTWOZTPz5bhhIzC70Rs+oOZ25nEyTmSzjTjmNZbPhnW1g4Gtq7D0eUzNZXJjXjW9AGZcphq6mV+HLu6kusPVh9s8SW7rLUissnWYwnslAGxmfIIPh/i6WSuFUNmdqWApNlHM5WBnY1qQATbOE+7oGD+xRslm2vMzuLuMGWFPq0jIZeBvrcQQMAFrTSwTBGyfcrMfpCO5+jIaTc4uehtpAR3vP1qbQmTFPQx3oPnT5F3U5BZZkE/v1Bp4DPt0a+Q9f73AaXg6cdPDpnUQ5kZx+5Mgb/vc/Ts4teOpqgnufCHa2h/ft+vOI3yNLLJuh1YmpGVQfvUUnKMmOq7FcFnCD21t6mh80+S5Ejp8OHtqHNGNjielZFa7upb6eVo/idvlamwusTSVNB8+HhGT3No2tZnwPNYS7vTQGZx9+7dWCSeizk5FvztMtYQFlC8EFHYHCqhiapsmRq8sHn9ld6jKR4VPJ+cWh7y4ySVqDBiq20CZggZxPKgotw6tUjvR3Ki45eVsdOBpVuODraPd1405B/0FsX+z3v3csH/0s8fsUOngxdNGnTRDflkaIDm9DbeLmrfDhg97mzeu4ex6oj78TTM7eLvKoIlzBZiwV7xkan4S4CD7eAl5MY+C2SmV58YLo+biaWgn0PZWnKW6UKbj9OBykjPxwVU2lacz/5gfF1slb8/63P/J1efPERKw2oUuhuYWL+cUpR3++TsMj775ug/57nskOvEw6E1yjJNmv8Z6CILSZupzONS75AsqEjg7DHcBsZGRMhcjiQmJO7dlWvUZOKBWEdoM5yIqyAxJb9PpUQRMqoHjg0P7knSVWXqZyDqJFxq5CH7PgvSgXCUJPAxGXHbGZ+dq3Phz49ARNDp0axQTU0hR++QWEK3MztwsTLOCK/+caC0+aKbpSWRF8FpM15KDQ519HTnxLzsdcruD+DsxQQIILycU7tpR5b60tJzUtDCN8oNNTr8D3wCdfqqIUGb0EOsRuzABl7+ZN4d49Q5evRX/6ja2u5pdbfwUHt6cnw3oMB3ueDGx/FKUYuxKFbFlTrcLtxa/hTZSVDcQuepSqwI42qPbEKVjCMqEkqRqGp9w98txewg2dvjDw1SirqgRoVlPFqqtYRQWwVnUG71nkwhWbX4Iy8CKL5rNryyF0Gt0I72jFZDQ+MRSfTC6owBGfUXBHp8wkh5UicpqaToe+TyiyI7ALn4vEzb+iE38gCXBzsRSawu9snB49zN1ut/lIS0x2ohTQp18gkkanDI1ewudC1yNnf0QS4DYQFoDOeQk0kIJ71yXmEqzMKXLLmhYI5uG4QOqpaeY/eQ4fQxivqkAqTtnSxB6NAkoP6QaCAKYptXNTPpEXFGR0Vtn0BPrhoZmHgL3NcDNJlAoiEGuA09fiCH5uccEWb8RJMPcDOD1vLJrZinN2v8u/AgwA8f4tcizNyogAAAAASUVORK5CYII=",
 				"data:image/png;base64,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",
@@ -276,6 +277,8 @@
 			// NPC空地：必要攻撃力(理論値)
 			//4章
 			POTENTIAL_LIST_4 = {'★10000': '<h6>★1　[平 10000]</h6><ul class="potential"><li>×槍245</li><li>×弓185</li><li>◎馬155</li><li>×器203</li></ul>','★01000': '<h6>★1　[平 01000]</h6><ul class="potential"><li>×槍185</li><li>◎弓155</li><li>×馬245</li><li>×器173</li></ul>','★★00200': '<h6>★2　[鉄 00200]</h6><ul class="potential"><li>×槍520</li><li>×弓520</li><li>×馬520</li><li>◎器448</li></ul>','★★10010': '<h6>★2　[平 10010]</h6><ul class="potential"><li>◎槍370</li><li>×弓550</li><li>×馬430</li><li>◎器370</li></ul>','★★★11100': '<h6>★3　[平 11100]</h6><ul class="potential"><li>×槍1210</li><li>◎弓730</li><li>×馬2170</li><li>×器1018</li></ul>','★★★11110': '<h6>★3　[平 11110]</h6><ul class="potential"><li>×槍2170</li><li>×弓1210</li><li>◎馬730</li><li>×器1498</li></ul>','★★★01101': '<h6>★3　[平 01101]</h6><ul class="potential"><li>◎槍730</li><li>×弓2170</li><li>×馬1210</li><li>×器1018</li></ul>','★★★★20001': '<h6>★4　[木 20001]</h6><ul class="potential"><li>×槍5930</li><li>×弓3835</li><li>◎馬2788</li><li>×器4464</li></ul>','★★★★12000': '<h6>★4　[綿 12000]</h6><ul class="potential"><li>×槍3840</li><li>◎弓2640</li><li>×馬6240</li><li>×器3360</li></ul>','★★★★00210': '<h6>★4　[鉄 00210]</h6><ul class="potential"><li>◎槍2790</li><li>×弓6120</li><li>×馬3900</li><li>×器3456</li></ul>','★★★★11021': '<h6>★4　[糧 11021]</h6><ul class="potential"><li>◎計3840</li></ul>','★★★★★50002': '<h6>★5　[木 50002]</h6><ul class="potential"><li>×槍19910</li><li>◎弓10550</li><li>×馬16790</li><li>×器14292</li></ul>','★★★★★30021': '<h6>★5　[木 30021]</h6><ul class="potential"><li>◎槍8320</li><li>×弓23140</li><li>×馬15080</li><li>×器11128</li></ul>','★★★★★13020': '<h6>★5　[綿 13020]</h6><ul class="potential"><li>×槍15340</li><li>×弓15340</li><li>×馬15340</li><li>◎器13468</li></ul>','★★★★★02300': '<h6>★5　[鉄 02300]</h6><ul class="potential"><li>◎槍8385</li><li>×弓15763</li><li>×馬15470</li><li>×器9464</li></ul>','★★★★★01520': '<h6>★5　[鉄 01520]</h6><ul class="potential"><li>×槍23200</li><li>×弓15400</li><li>◎馬8700</li><li>×器16540</li></ul>','★★★★★30140': '<h6>★5　[糧 30140]</h6><ul class="potential"><li>×槍14970</li><li>◎弓7810</li><li>×馬23340</li><li>×器11596</li></ul>','★★★★★★30210': '<h6>★6　[木 30210]</h6><ul class="potential"><li>×槍39178</li><li>◎弓21578</li><li>×馬74378</li><li>×器32138</li></ul>','★★★★★★14321': '<h6>★6　[綿 14321]</h6><ul class="potential"><li>×槍56900</li><li>◎弓28450</li><li>×馬50800</li><li>×器40120</li></ul>','★★★★★★23122': '<h6>★6　[綿 23122]</h6><ul class="potential"><li>×槍86960</li><li>×弓44160</li><li>◎馬22760</li><li>×器57000</li></ul>','★★★★★★13432': '<h6>★6　[鉄 13432]</h6><ul class="potential"><li>×槍63200</li><li>×弓61100</li><li>◎馬32750</li><li>×器50030</li></ul>','★★★★★★22242': '<h6>★6　[糧 22242]</h6><ul class="potential"><li>×槍51400</li><li>◎弓25700</li><li>×馬56600</li><li>×器37160</li></ul>','★★★★★★03340': '<h6>★6　[糧 03340]</h6><ul class="potential"><li>◎槍22010</li><li>×弓81410</li><li>×馬41810</li><li>×器33890</li></ul>','★★★★★★★42402': '<h6>★7　[山 42402]</h6><ul class="potential"><li>×槍210200</li><li>×弓114200</li><li>◎馬66200</li><li>×器143000</li></ul>','★★★★★★★89331': '<h6>★7　[山 89331]</h6><ul class="potential"><li>×槍225000</li><li>×弓112500</li><li>◎馬56250</li><li>×器146250</li></ul>','★★★★★★★13221': '<h6>★7　[山 13221]</h6><ul class="potential"><li>×槍112020</li><li>◎弓64020</li><li>×馬208020</li><li>×器92820</li></ul>','★★★★★★★41151': '<h6>★7　[山 41151]</h6><ul class="potential"><li>×槍111000</li><li>◎弓55500</li><li>×馬222000</li><li>×器88800</li></ul>','★★★★★★★52630': '<h6>★7　[山 52630]</h6><ul class="potential"><li>◎槍58000</li><li>×弓232000</li><li>×馬116000</li><li>×器92800</li></ul>','★★★★★★★43510': '<h6>★7　[山 43510]</h6><ul class="potential"><li>◎槍67800</li><li>×弓202800</li><li>×馬112800</li><li>×器94800</li></ul>','★★★★★★★★62211': '<h6>★8　[山 62211]</h6><ul class="potential"><li>×槍243220</li><li>×弓132670</li><li>◎馬93320</li><li>×器167200</li></ul>','★★★★★★★★15112': '<h6>★8　[山 15112]</h6><ul class="potential"><li>◎槍98560</li><li>×弓181360</li><li>×馬126160</li><li>×器115120</li></ul>','★★★★★★★★21601': '<h6>★8　[山 21601]</h6><ul class="potential"><li>×槍125620</li><li>◎弓95820</li><li>×馬230020</li><li>×器109860</li></ul>','★★★★★★★★33310': '<h6>★8　[山 33310]</h6><ul class="potential"><li>◎計124800</li></ul>'},
+			//6章
+			POTENTIAL_LIST_6 = {'★10000':'<h6>★1 [平 10000]</h6><ul class="potential"><li>×槍245</li><li>×弓185</li><li>◎馬155</li><li>×器203</li></ul>','★01000':'<h6>★1 [平 01000]</h6><ul class="potential"><li>◎槍155</li><li>×弓245</li><li>×馬185</li><li>×器173</li></ul>','★★00201':'<h6>★2 [鉄 00201]</h6><ul class="potential"><li>◎槍370</li><li>×弓550</li><li>×馬430</li><li>◎器370</li></ul>','★★11020':'<h6>★2 [糧 11020]</h6><ul class="potential"><li>×槍520</li><li>×弓520</li><li>×馬520</li><li>◎器448</li></ul>','★★★11101':'<h6>★3 [平 11101]</h6><ul class="potential"><li>◎槍735</li><li>×弓2265</li><li>×馬1245</li><li>×器1041</li></ul>','★★★11110':'<h6>★3 [平 11110]</h6><ul class="potential"><li>×槍2265</li><li>◎弓1245</li><li>×馬2265</li><li>×器1551</li></ul>','★★★★11101':'<h6>★4 [木 11101]</h6><ul class="potential"><li>◎計5600</li></ul>','★★★★12100':'<h6>★4 [綿 12100]</h6><ul class="potential"><li>×槍8865</li><li>×弓5645</li><li>◎馬4035</li><li>×器6611</li></ul>','★★★★11210':'<h6>★4 [鉄 11210]</h6><ul class="potential"><li>×槍6285</li><li>◎弓4380</li><li>×馬1095</li><li>×器5523</li></ul>','★★★★21131':'<h6>★4 [糧 21131]</h6><ul class="potential"><li>◎槍4030</li><li>×弓8620</li><li>×馬5560</li><li>×器4948</li></ul>','★★★★★50201':'<h6>★5 [木 50201]</h6><ul class="potential"><li>◎槍12075</li><li>×弓31375</li><li>×馬2245</li><li>×器15595</li></ul>','★★★★★32010':'<h6>★5 [木 32010]</h6><ul class="potential"><li>×槍23375</li><li>◎弓13175</li><li>×馬25925</li><li>×器17765</li></ul>','★★★★★23010':'<h6>★5 [綿 23010]</h6><ul class="potential"><li>×槍23530</li><li>◎弓12740</li><li>×馬37375</li><li>×器18551</li></ul>','★★★★★10501':'<h6>★5 [鉄 10501]</h6><ul class="potential"><li>×槍20055</li><li>×弓20055</li><li>×馬20055</li><li>◎器18147</li></ul>','★★★★★01520':'<h6>★5 [鉄 01520]</h6><ul class="potential"><li>×槍31220</li><li>×弓20555</li><li>◎馬11303</li><li>×器22075</li></ul>','★★★★★04150':'<h6>★5 [糧 04150]</h6><ul class="potential"><li>◎槍14530</li><li>×弓24233</li><li>×馬27885</li><li>×器15603</li></ul>','★★★★★★22210':'<h6>★6 [木 22210]</h6><ul class="potential"><li>×槍80295</li><li>◎弓40148</li><li>×馬96960</li><li>×器58782</li></ul>','★★★★★★43311':'<h6>★6 [木 43311]</h6><ul class="potential"><li>×槍65250</li><li>◎弓35090</li><li>×馬125570</li><li>×器53186</li></ul>','★★★★★★45232':'<h6>★6 [綿 45232]</h6><ul class="potential"><li>×槍84870</li><li>◎弓42435</li><li>×馬79020</li><li>×器60120</li></ul>','★★★★★★25132':'<h6>★6 [綿 25132]</h6><ul class="potential"><li>◎槍29220</li><li>×弓109740</li><li>×馬56060</li><li>×器45324</li></ul>','★★★★★★32431':'<h6>★6 [鉄 32431]</h6><ul class="potential"><li>×槍77855</li><li>×弓75290</li><li>◎馬40408</li><li>×器61660</li></ul>','★★★★★★11450':'<h6>★6 [糧 11450]</h6><ul class="potential"><li>×槍109875</li><li>×弓56000</li><li>◎馬29063</li><li>×器72163</li></ul>','★★★★★★★15152':'<h6>★7 [山 15152]</h6><ul class="potential"><li>◎槍77070</li><li>×弓308280</li><li>×馬154140</li><li>×器123312</li></ul>','★★★★★★★22230':'<h6>★7 [山 22230]</h6><ul class="potential"><li>◎槍88105</li><li>×弓286555</li><li>×馬154255</li><li>×器127795</li></ul>','★★★★★★★12630':'<h6>★7 [山 12630]</h6><ul class="potential"><li>×槍154050</li><li>◎弓77025</li><li>×馬308100</li><li>×器123240</li></ul>','★★★★★★★910651':'<h6>★7 [山 910651]</h6><ul class="potential"><li>×槍169650</li><li>×弓169650</li><li>×馬169650</li><li>◎器150930</li></ul>','★★★★★★★52222':'<h6>★7 [山 52222]</h6><ul class="potential"><li>×槍291770</li><li>×弓164890</li><li>◎馬82445</li><li>×器194809</li></ul>','★★★★★★★33341':'<h6>★7 [山 33341]</h6><ul class="potential"><li>×槍240945</li><li>×弓154185</li><li>◎馬110805</li><li>×器180213</li></ul>','★★★★★★★★72221':'<h6>★8 [山 72221]</h6><ul class="potential"><li>×槍182140</li><li>◎弓146705</li><li>×馬321610</li><li>×器162086</li></ul>','★★★★★★★★27213':'<h6>★8 [山 27213]</h6><ul class="potential"><li>×槍259560</li><li>×弓179538</li><li>◎馬154848</li><li>×器204858</li></ul>','★★★★★★★★22702':'<h6>★8 [山 22702]</h6><ul class="potential"><li>◎槍140220</li><li>×弓267480</li><li>×馬182640</li><li>×器165672</li></ul>','★★★★★★★★33342':'<h6>★8 [山 33342]</h6><ul class="potential"><li>◎計182440</li></ul>'},
 			//5章
 			POTENTIAL_LIST_5_5 = {'★10000':'<h6>★1 [平 10000]</h6><ul class="potential"><li>×槍245</li><li>×弓185</li><li>◎馬155</li><li>×器203</li></ul>','★01000':'<h6>★1 [平 01000]</h6><ul class="potential"><li>◎槍155</li><li>×弓245</li><li>×馬185</li><li>×器173</li></ul>','★★00201':'<h6>★2 [鉄 00201]</h6><ul class="potential"><li>◎槍370</li><li>×弓550</li><li>×馬430</li><li>◎器370</li></ul>','★★11020':'<h6>★2 [糧 11020]</h6><ul class="potential"><li>×槍520</li><li>×弓520</li><li>×馬520</li><li>◎器448</li></ul>','★★★11101':'<h6>★3 [平 11101]</h6><ul class="potential"><li>◎槍735</li><li>×弓2265</li><li>×馬1245</li><li>×器1041</li></ul>','★★★11110':'<h6>★3 [平 11110]</h6><ul class="potential"><li>×槍2265</li><li>◎弓1245</li><li>×馬2265</li><li>×器1551</li></ul>','★★★★11101':'<h6>★4 [木 11101]</h6><ul class="potential"><li>◎計5145</li></ul>','★★★★12100':'<h6>★4 [綿 12100]</h6><ul class="potential"><li>×槍8255</li><li>×弓5265</li><li>◎馬3770</li><li>×器6162</li></ul>','★★★★11210':'<h6>★4 [鉄 11210]</h6><ul class="potential"><li>×槍5260</li><li>◎弓3780</li><li>×馬8220</li><li>×器4668</li></ul>','★★★★21131':'<h6>★4 [糧 21131]</h6><ul class="potential"><li>◎槍3745</li><li>×弓8005</li><li>×馬5165</li><li>×器4597</li></ul>','★★★★★50201':'<h6>★5 [木 50201]</h6><ul class="potential"><li>◎槍10435</li><li>×弓28673</li><li>×馬19320</li><li>×器13842</li></ul>','★★★★★32010':'<h6>★5 [木 32010]</h6><ul class="potential"><li>×槍21680</li><li>◎弓12200</li><li>×馬24050</li><li>×器16466</li></ul>','★★★★★23010':'<h6>★5 [綿 23010]</h6><ul class="potential"><li>×槍18965</li><li>◎弓10383</li><li>×馬28990</li><li>×器14920</li></ul>','★★★★★10501':'<h6>★5 [鉄 10501]</h6><ul class="potential"><li>×槍18535</li><li>×弓18535</li><li>×馬18535</li><li>◎器16771</li></ul>','★★★★★01520':'<h6>★5 [鉄 01520]</h6><ul class="potential"><li>×槍28950</li><li>×弓19065</li><li>◎馬10483</li><li>×器20471</li></ul>','★★★★★04150':'<h6>★5 [糧 04150]</h6><ul class="potential"><li>◎槍12630</li><li>×弓22090</li><li>×馬24160</li><li>×器13804</li></ul>','★★★★★★22210':'<h6>★6 [木 22210]</h6><ul class="potential"><li>×槍69090</li><li>◎弓34545</li><li>×馬78960</li><li>×器50196</li></ul>','★★★★★★43311':'<h6>★6 [木 43311]</h6><ul class="potential"><li>×槍51985</li><li>◎弓28288</li><li>×馬99380</li><li>×器42506</li></ul>','★★★★★★45232':'<h6>★6 [綿 45232]</h6><ul class="potential"><li>×槍76025</li><li>◎弓38013</li><li>×馬67840</li><li>×器53602</li></ul>','★★★★★★25132':'<h6>★6 [綿 25132]</h6><ul class="potential"><li>◎槍27140</li><li>×弓101930</li><li>×馬52070</li><li>×器42098</li></ul>','★★★★★★32431':'<h6>★6 [鉄 32431]</h6><ul class="potential"><li>×槍72345</li><li>×弓69920</li><li>◎馬37523</li><li>×器57283</li></ul>','★★★★★★11450':'<h6>★6 [糧 11450]</h6><ul class="potential"><li>×槍102015</li><li>×弓51985</li><li>◎馬26970</li><li>×器66994</li></ul>','★★★★★★★15152':'<h6>★7 [山 15152]</h6><ul class="potential"><li>◎槍77070</li><li>×弓308280</li><li>×馬154140</li><li>×器123312</li></ul>','★★★★★★★22230':'<h6>★7 [山 22230]</h6><ul class="potential"><li>◎槍88105</li><li>×弓286555</li><li>×馬154255</li><li>×器127795</li></ul>','★★★★★★★12630':'<h6>★7 [山 12630]</h6><ul class="potential"><li>×槍154050</li><li>◎弓77025</li><li>×馬308100</li><li>×器123240</li></ul>','★★★★★★★910651':'<h6>★7 [山 910651]</h6><ul class="potential"><li>×槍169650</li><li>×弓169650</li><li>×馬169650</li><li>◎器150930</li></ul>','★★★★★★★52222':'<h6>★7 [山 52222]</h6><ul class="potential"><li>×槍291770</li><li>×弓164890</li><li>◎馬82445</li><li>×器194809</li></ul>','★★★★★★★33341':'<h6>★7 [山 33341]</h6><ul class="potential"><li>×槍240945</li><li>×弓154185</li><li>◎馬110805</li><li>×器180213</li></ul>','★★★★★★★★72221':'<h6>★8 [山 72221]</h6><ul class="potential"><li>×槍172340</li><li>◎弓141805</li><li>×馬302010</li><li>×器154246</li></ul>','★★★★★★★★27213':'<h6>★8 [山 27213]</h6><ul class="potential"><li>×槍257500</li><li>×弓178508</li><li>◎馬150728</li><li>×器203210</li></ul>','★★★★★★★★22702':'<h6>★8 [山 22702]</h6><ul class="potential"><li>◎槍140220</li><li>×弓267480</li><li>×馬182640</li><li>×器165672</li></ul>','★★★★★★★★33342':'<h6>★8 [山 33342]</h6><ul class="potential"><li>◎計182440</li></ul>'},
 			POTENTIAL_LIST_5_4 = {'★10000':'<h6>★1 [平 10000]</h6><ul class="potential"><li>×槍245</li><li>×弓185</li><li>◎馬155</li><li>×器203</li></ul>','★01000':'<h6>★1 [平 01000]</h6><ul class="potential"><li>◎槍155</li><li>×弓245</li><li>×馬185</li><li>×器173</li></ul>','★★00201':'<h6>★2 [鉄 00201]</h6><ul class="potential"><li>◎槍370</li><li>×弓550</li><li>×馬430</li><li>◎器370</li></ul>','★★11020':'<h6>★2 [糧 11020]</h6><ul class="potential"><li>×槍520</li><li>×弓520</li><li>×馬520</li><li>◎器448</li></ul>','★★★11101':'<h6>★3 [平 11101]</h6><ul class="potential"><li>◎槍735</li><li>×弓2265</li><li>×馬1245</li><li>×器1041</li></ul>','★★★11110':'<h6>★3 [平 11110]</h6><ul class="potential"><li>×槍2265</li><li>◎弓1245</li><li>×馬2265</li><li>×器1551</li></ul>','★★★★11101':'<h6>★4 [木 11101]</h6><ul class="potential"><li>◎計4800</li></ul>','★★★★12100':'<h6>★4 [綿 12100]</h6><ul class="potential"><li>×槍7620</li><li>×弓4860</li><li>◎馬3480</li><li>×器5688</li></ul>','★★★★11210':'<h6>★4 [鉄 11210]</h6><ul class="potential"><li>×槍4895</li><li>◎弓3510</li><li>×馬7665</li><li>×器4341</li></ul>','★★★★21131':'<h6>★4 [糧 21131]</h6><ul class="potential"><li>◎槍3450</li><li>×弓7350</li><li>×馬4750</li><li>×器4230</li></ul>','★★★★★50201':'<h6>★5 [木 50201]</h6><ul class="potential"><li>◎槍9635</li><li>×弓26530</li><li>×馬17845</li><li>×器12793</li></ul>','★★★★★32010':'<h6>★5 [木 32010]</h6><ul class="potential"><li>×槍20070</li><li>◎弓11310</li><li>×馬22260</li><li>×器15252</li></ul>','★★★★★23010':'<h6>★5 [綿 23010]</h6><ul class="potential"><li>×槍17485</li><li>◎弓9580</li><li>×馬26750</li><li>×器13762</li></ul>','★★★★★10501':'<h6>★5 [鉄 10501]</h6><ul class="potential"><li>×槍17100</li><li>×弓17100</li><li>×馬17100</li><li>◎器15480</li></ul>','★★★★★01520':'<h6>★5 [鉄 01520]</h6><ul class="potential"><li>×槍26680</li><li>×弓17575</li><li>◎馬9663</li><li>×器18867</li></ul>','★★★★★04150':'<h6>★5 [糧 04150]</h6><ul class="potential"><li>◎槍11640</li><li>×弓20390</li><li>×馬22280</li><li>×器12728</li></ul>','★★★★★★22210':'<h6>★6 [木 22210]</h6><ul class="potential"><li>×槍63700</li><li>◎弓31850</li><li>×馬72800</li><li>×器46280</li></ul>','★★★★★★43311':'<h6>★6 [木 43311]</h6><ul class="potential"><li>×槍48000</li><li>◎弓26125</li><li>×馬91750</li><li>×器39250</li></ul>','★★★★★★45232':'<h6>★6 [綿 45232]</h6><ul class="potential"><li>×槍70215</li><li>◎弓35108</li><li>×馬62730</li><li>×器49512</li></ul>','★★★★★★25132':'<h6>★6 [綿 25132]</h6><ul class="potential"><li>◎槍25060</li><li>×弓94120</li><li>×馬48080</li><li>×器38872</li></ul>','★★★★★★32431':'<h6>★6 [鉄 32431]</h6><ul class="potential"><li>×槍66665</li><li>×弓64465</li><li>◎馬34595</li><li>×器52795</li></ul>','★★★★★★11450':'<h6>★6 [糧 11450]</h6><ul class="potential"><li>×槍94035</li><li>×弓47910</li><li>◎馬24848</li><li>×器61748</li></ul>','★★★★★★★15152':'<h6>★7 [山 15152]</h6><ul class="potential"><li>◎槍71550</li><li>×弓286200</li><li>×馬143100</li><li>×器114480</li></ul>','★★★★★★★22230':'<h6>★7 [山 22230]</h6><ul class="potential"><li>◎槍81470</li><li>×弓265700</li><li>×馬142880</li><li>×器118316</li></ul>','★★★★★★★12630':'<h6>★7 [山 12630]</h6><ul class="potential"><li>×槍143040</li><li>◎弓71520</li><li>×馬286080</li><li>×器114432</li></ul>','★★★★★★★910651':'<h6>★7 [山 910651]</h6><ul class="potential"><li>×槍157230</li><li>×弓157230</li><li>×馬157230</li><li>◎器139842</li></ul>','★★★★★★★52222':'<h6>★7 [山 52222]</h6><ul class="potential"><li>×槍270870</li><li>×弓153180</li><li>◎馬76590</li><li>×器180882</li></ul>','★★★★★★★33341':'<h6>★7 [山 33341]</h6><ul class="potential"><li>×槍223815</li><li>×弓143295</li><li>◎馬103035</li><li>×器167451</li></ul>','★★★★★★★★72221':'<h6>★8 [山 72221]</h6><ul class="potential"><li>×槍160394</li><li>◎弓132034</li><li>×馬280813</li><li>×器143590</li></ul>','★★★★★★★★27213':'<h6>★8 [山 27213]</h6><ul class="potential"><li>×槍239470</li><li>×弓166115</li><li>◎馬140358</li><li>×器189058</li></ul>','★★★★★★★★22702':'<h6>★8 [山 22702]</h6><ul class="potential"><li>◎槍130130</li><li>×弓248240</li><li>×馬169500</li><li>×器153752</li></ul>','★★★★★★★★33342':'<h6>★8 [山 33342]</h6><ul class="potential"><li>◎計169480</li></ul>'},
@@ -291,6 +294,9 @@
 			// 豪族砦データ
 			BASE_AREA_4 = [ [0, 0],[ 12, 28], [ 28, 12], [ 12, 52], [ 36, 36], [ 52, 12], [ 12, 76], [ 36, 60], [ 60, 36], [ 76, 12], [ 12,100],[ 36, 84], [ 60, 60], [ 84, 36], [100, 12], [ 12,124], [ 36,108], [ 60, 84], [ 84, 60], [108, 36], [124, 12],[ 12,148], [ 36,132], [ 60,108], [ 84, 84], [108, 60], [132, 36], [148, 12], [ 36,156], [ 60,132], [ 84,108],[108, 84], [132, 60], [156, 36], [ 60,156], [ 84,132], [108,108], [132, 84], [156, 60], [ 84,156], [108,132],[132,108], [156, 84], [108,156], [132,132], [156,108], [132,156], [156,132], [156,156] ],
 			BASE_AREA_5 = [ [0, 0],[ 12, 28], [ 28, 12], [ 12, 52], [ 36, 36], [ 52, 12], [ 12, 76], [ 36, 60], [ 60, 36], [ 76, 12], [ 12,100],[ 36, 84], [ 60, 60], [ 84, 36], [100, 12], [ 12,124], [ 36,108], [ 60, 84], [ 84, 60], [108, 36], [124, 12],[ 36,132], [ 60,108], [ 84, 84], [108, 60], [132, 36], [ 60,132], [ 84,108], [108, 84], [132, 60], [ 84,132],[108,108], [132, 84], [108,132], [132,108], [132,132] ],
+
+			//メンテナンス
+			mainte = $('p.copyright').find('img').attr('src').split('\/')[4].split('-')[0],
 
 			group_setting = null,
 			//cardname_setting = null,
@@ -414,7 +420,7 @@
 							setting_dialog_strx += '<LABEL><INPUT type="checkbox" checked disabled="disabled" /> ' + options_param[key].caption +'</LABEL>';
 							setting_dialog_strx += '<DIV class="scbar_normal" style="padding: 0.5em;border:1px solid silver; margin-left:2em; margin-bottom:1em; height:8.5em; width:11em; overflow-y:scroll;">';
 							setting_dialog_strx += '<TABLE class="ixamoko_setting" key="' + key + '" width="100px";><TBODY>';
-							var drs_list = {1: '足軽',2: '長槍足軽',3: '武士',4: '弓足軽',5: '長弓兵',6: '弓騎馬',7: '騎馬兵',8: '精鋭騎馬',9: '赤備え',10: '鉄砲足軽',11: '騎馬鉄砲',12: '破城鎚',13: '攻城櫓',14: '大筒兵'};
+							var drs_list = {1: '足軽',2: '長槍足軽',3: '武士',4: '弓足軽',5: '長弓兵',6: '弓騎馬',7: '騎馬兵',8: '精鋭騎馬',9: '赤備え',10: '鉄砲足軽',11: '騎馬鉄砲',12: '焙烙火矢',13: '破城鎚',14: '攻城櫓',15: '大筒兵'};
 							for (key2 in drs_list) {
 								if (options[key][key2]) {
 									setting_dialog_strx += '<tr><td><input type="checkbox"; checked/></td><td>' + drs_list[key2] + '</td></tr>';
@@ -693,6 +699,7 @@
 														'<OPTION value="3"' +(parseInt(options[key],10) === 3? 'SELECTED': '') + '>第5章【3期】『天鳴地暴！日ノ本の激戦!!』</OPTION>' +
 														'<OPTION value="4"' +(parseInt(options[key],10) === 4? 'SELECTED': '') + '>第5章【4期】『天鳴地暴！日ノ本の激戦!!』</OPTION>' +
 														'<OPTION value="5"' +(parseInt(options[key],10) === 5? 'SELECTED': '') + '>第5章【5期】『天鳴地暴！日ノ本の激戦!!』</OPTION>' +
+														'<OPTION value="6"' +(parseInt(options[key],10) === 6? 'SELECTED': '') + '>第6章【6期】『群雄集結！天下を賭した大合戦！！』</OPTION>' +
 													'</SELECT><BR />';
 						} else if (key === 'ambitiousBull') {
 							setting_dialog_strx +=
@@ -1651,12 +1658,12 @@
 				menu02.find('li').slice(0, 3).remove();
 				menu02.find('ul')
 				.prepend(
-					  '<li><a href="/facility/set_unit_list.php?show_num=100&select_card_group=1">兵士編成【第一組】</a></li>' +
-					  '<li><a href="/facility/set_unit_list.php?show_num=100&select_card_group=2">兵士編成【第二組】</a></li>' +
-					  '<li><a href="/facility/set_unit_list.php?show_num=100&select_card_group=3">兵士編成【第三組】</a></li>' +
-					  '<li><a href="/facility/set_unit_list.php?show_num=100&select_card_group=4">兵士編成【第四組】</a></li>' +
-					  '<li><a href="/facility/set_unit_list.php?show_num=100&select_card_group=5">兵士編成【未設定】</a></li>' +
-					  '<li><a href="/facility/set_unit_list.php?show_num=100&select_card_group=0">兵士編成【全武将】</a></li>'
+					  '<li><a href="/card/deck.php?ano=0">部隊編成 [デッキ1]</a></li>' +
+					  '<li><a href="/card/deck.php?ano=1">部隊編成 [デッキ2]</a></li>' +
+					  '<li><a href="/card/deck.php?ano=2">部隊編成 [デッキ3]</a></li>' +
+					  '<li><a href="/card/deck.php?ano=3">部隊編成 [デッキ4]</a></li>' +
+					  '<li><a href="/card/deck.php?ano=4">部隊編成 [デッキ5]</a></li>' +
+					  '<li><a href="/facility/unit_status.php?dmo=help">友軍</a></li>'
 					 );
 				menu02.find('a:contains("カード一括破棄")').attr('href', '/card/deck_card_delete.php?show_num=100');
 				menu07.find('ul').append('<li><a href="/alliance/alliance_gold_mine_history.php">発掘履歴</a></li>');
@@ -1833,15 +1840,20 @@
 				if( newBattle == '新合戦中' ){ $('#friendly').remove(); }
 				
 				$('<div style="display: none;">' + 
-					'<a href="/facility/set_unit_list.php?show_num=50">兵士編成 【50】</a>' +
-					'<a href="/facility/set_unit_list.php?show_num=20">兵士編成 【20】</a>' +
+					'<a href="/facility/set_unit_list.php?show_num=100&select_card_group=1">【第一組】兵士編成</a>' +
+					'<a href="/facility/set_unit_list.php?show_num=100&select_card_group=2">【第二組】兵士編成</a>' +
+					'<a href="/facility/set_unit_list.php?show_num=100&select_card_group=3">【第三組】兵士編成</a>' +
+					'<a href="/facility/set_unit_list.php?show_num=100&select_card_group=4">【第四組】兵士編成</a>' +
+					'<a href="/facility/set_unit_list.php?show_num=100&select_card_group=5">【未設定】兵士編成</a>' +
 				  '</div>'
 				).appendTo('#全兵士編成');
 				
 				$('#全部隊, #全兵士編成').hover(function(){
+					$(this).css('background-color', 'darkred');
 					$(this).height('22px').children('div').slideDown(200);
 					$(this).prev().height('22px');
 				},function(){
+					$(this).css('background-color', '');
 					$(this).height('').children('div').slideUp(200);
 					$(this).prev().height('');
 				})
@@ -2085,14 +2097,17 @@
 					'<div style="display: none;">' + 
 						'<a href="/senkuji/senkuji.php">戦国くじ</a>' +
 						'<a href="/card/trade.php?t=name&k=&s=no&o=a">取引</a>' +
+						'<a href="/card/trade_card.php">出品</a>' +
 						'<a href="/union/index.php">合成</a>' +
 						'<a href="/card/card_album.php">カードアルバム</a>' +
 					'</div>' +
 				  '<li>'
 				).hover(function(){
+					$(this).css('background-color', 'darkred');
 					$(this).height('22px').children('div').slideDown(200);
 					$(this).prev().height('22px');
 				},function(){
+					$(this).css('background-color', '');
 					$(this).height('').children('div').slideUp(200);
 					$(this).prev().height('');
 				}).appendTo($('#status_left > ul'));
@@ -2864,22 +2879,61 @@
 				var Otono = $('img.otono_name')
 							.css({'cursor':'pointer', 'margin-top':'-6px', 'margin-left':'-5px'})
 							.wrap('<span id="country_change"></span>');
-				$('<div id="change_menu">' +
-					'<a href="' + center_code + '12">最上家</a>' +
-					'<a href="' + center_code + '7">伊達家｜浅井家</a>' +
-					'<a href="' + center_code + '4">上杉家</a>' +
-					'<a href="' + center_code + '8">北条家</a>' +
-					'<a href="' + center_code + '3">武田家</a>' +
-					'<a href="' + center_code + '5">徳川家</a>' +
-					'<a href="' + center_code + '1">織田家</a>' +
-					'<a href="' + center_code + '2">足利家</a>' +
-					'<a href="' + center_code + '11">豊臣家｜大友家</a>' +
-					'<a href="' + center_code + '6">毛利家</a>' +
-					'<a href="' + center_code + '9">長宗我部家</a>' +
-					'<a href="' + center_code + '10">島津家</a>' +
-				 '</div>'
-				).appendTo('#country_change');
-				
+				//4章
+				if ( options.chapter_change === '0' ) {
+					$('<div id="change_menu">' +
+						'<a href="' + center_code + '12">最上家</a>' +
+						'<a href="' + center_code + '7">浅井家</a>' +
+						'<a href="' + center_code + '4">上杉家</a>' +
+						'<a href="' + center_code + '8">北条家</a>' +
+						'<a href="' + center_code + '3">武田家</a>' +
+						'<a href="' + center_code + '5">徳川家</a>' +
+						'<a href="' + center_code + '1">織田家</a>' +
+						'<a href="' + center_code + '2">足利家</a>' +
+						'<a href="' + center_code + '11">大友家</a>' +
+						'<a href="' + center_code + '6">毛利家</a>' +
+						'<a href="' + center_code + '9">長宗我部家</a>' +
+						'<a href="' + center_code + '10">島津家</a>' +
+					 '</div>'
+					).appendTo('#country_change');
+				}
+				//6章
+				if ( options.chapter_change === '6' ) {
+					$('<div id="change_menu">' +
+						'<a href="' + center_code + '12">石田家</a>' +
+						'<a href="' + center_code + '7">伊達家</a>' +
+						'<a href="' + center_code + '4">上杉家</a>' +
+						'<a href="' + center_code + '8">今川家</a>' +
+						'<a href="' + center_code + '3">武田家</a>' +
+						'<a href="' + center_code + '5">徳川家</a>' +
+						'<a href="' + center_code + '1">織田家</a>' +
+						'<a href="' + center_code + '2">黒田家</a>' +
+						'<a href="' + center_code + '11">豊臣家</a>' +
+						'<a href="' + center_code + '6">毛利家</a>' +
+						'<a href="' + center_code + '9">長宗我部家</a>' +
+						'<a href="' + center_code + '10">島津家</a>' +
+					 '</div>'
+					).appendTo('#country_change');
+				}
+				//5章
+				else {
+					$('<div id="change_menu">' +
+						'<a href="' + center_code + '12">最上家</a>' +
+						'<a href="' + center_code + '7">伊達家</a>' +
+						'<a href="' + center_code + '4">上杉家</a>' +
+						'<a href="' + center_code + '8">北条家</a>' +
+						'<a href="' + center_code + '3">武田家</a>' +
+						'<a href="' + center_code + '5">徳川家</a>' +
+						'<a href="' + center_code + '1">織田家</a>' +
+						'<a href="' + center_code + '2">足利家</a>' +
+						'<a href="' + center_code + '11">豊臣家</a>' +
+						'<a href="' + center_code + '6">毛利家</a>' +
+						'<a href="' + center_code + '9">長宗我部家</a>' +
+						'<a href="' + center_code + '10">島津家</a>' +
+					 '</div>'
+					).appendTo('#country_change');
+				}
+
 				if(newBattle == '新合戦中'){
 					$('<a href="' + center_code + '20">東西戦場 1</a><a href="' + center_code + '21">東西戦場 2</a>')
 					.appendTo('#change_menu');
@@ -3151,9 +3205,15 @@
 					}
 					
 					var x = tmp[1], y = tmp[2], c = tmp[3];
+					//4章
 					if ( options.chapter_change === '0' ) {
 						var world = { 1:'織田家', 2:'足利家', 3: '武田家', 4: '上杉家', 5: '徳川家', 6: '毛利家', 7: '浅井家', 8: '北条家', 9: '長宗我部家', 10: '島津家', 11: '大友家', 12: '最上家', 20:'東西戦場1', 21:'東西戦場2' };
 					}
+					//6章
+					if ( options.chapter_change === '6' ) {
+						var world = { 1:'織田家', 2:'黒田家', 3: '武田家', 4: '上杉家', 5: '徳川家', 6: '毛利家', 7: '伊達家', 8: '今川家', 9: '長宗我部家', 10: '島津家', 11: '大友家', 12: '石田家', 20:'東西戦場1', 21:'東西戦場2' };
+					}
+					//5章
 					else {
 						var world = { 1:'織田家', 2:'足利家', 3: '武田家', 4: '上杉家', 5: '徳川家', 6: '毛利家', 7: '伊達家', 8: '北条家', 9: '長宗我部家', 10: '島津家', 11: '豊臣家', 12: '最上家', 20:'東西戦場1', 21:'東西戦場2' };
 					}
@@ -4355,7 +4415,7 @@
 					var mnbrData = {};
 					var alliesObj = {};
 					var fmlynm = $('.family_name p.name').text();
-					var cc = {'織田家': 1,'足利家': 2,'黒田家': 2,'武田家': 3,'上杉家': 4,'徳川家': 5,'毛利家': 6,'伊達家': 7,'浅井家': 7,'北条家': 8,'長宗我部家': 9,'島津家': 10,'豊臣家': 11,'大友家': 11,'最上家': 12,'石田家': 12};
+					var cc = {'織田家': 1,'足利家': 2,'黒田家': 2,'武田家': 3,'上杉家': 4,'徳川家': 5,'毛利家': 6,'伊達家': 7,'浅井家': 7,'北条家': 8,'今川家': 8,'長宗我部家': 9,'島津家': 10,'豊臣家': 11,'大友家': 11,'最上家': 12,'石田家': 12};
 					if (localStorage.getItem('alliesObj'))
 						alliesObj = secureEvalJSON(localStorage.getItem('alliesObj'));
 					if (!alliesObj[fmlynm])
@@ -4520,7 +4580,7 @@
 											}
 					setTimeout(waite_TB_window,1);
 					var tmp = '<div class="map_status" style="border-collapse: collapse; background: transparent; width: 100%; height: 100%; color: white;"><table id="all_map_status" style="border-spacing: 1px; background: #B1912C;"><tbody>';
-					tmp += '<tr><td colspan=14><select id="target"><option value="1">織田</option><option value="2">足利/黒田</option><option value="3">武田</option><option value="4">上杉</option><option value="5">徳川</option><option value="6">毛利</option><option value="7">浅井/伊達</option><option value="8">北条</option><option value="9">長宗</option><option value="10">島津</option><option value="11">大友/豊臣</option><option value="12">最上/石田</option></select><div id="lastmodify" style="padding:2px;"></div></td></tr>';
+					tmp += '<tr><td colspan=14><select id="target"><option value="1">織田</option><option value="2">足利/黒田</option><option value="3">武田</option><option value="4">上杉</option><option value="5">徳川</option><option value="6">毛利</option><option value="7">浅井/伊達</option><option value="8">北条/今川</option><option value="9">長宗</option><option value="10">島津</option><option value="11">大友/豊臣</option><option value="12">最上/石田</option></select><div id="lastmodify" style="padding:2px;"></div></td></tr>';
 					if ( options.chapter_change === '0' ) {
 					//4章の場合
 					var x = new Array(7);
@@ -4939,7 +4999,7 @@
 								if(fs[i].match(/待機/)) {
 									$('td.invalid_single').eq(i).addClass('single_diss');
 									$('td.invalid_all').addClass('all_diss');
-									$('div.fstatus').eq(i).addClass('set_unit').attr('title', '兵編成');
+									$('div.fstatus').eq(i).addClass('set_unit').attr('title', '部隊の兵士編成');
 									
 									$('div.set_unit').click(function(){
 										var ano = $(this).closest('tr').find('td.invalid_single').attr('id'),
@@ -5138,8 +5198,9 @@
 				
 				var fort_red = $('#ig_mapsAll').find('img[src*="/img/panel/fort_r"]').size();
 				var village_red = $('#ig_mapsAll').find('img[src*="/img/panel/village_r"]').size();
+				var branch_red = $('#ig_mapsAll').find('img[src*="/img/panel/branch_r"]').size();
 				
-				if( fort_red > 0 || village_red > 0  ) {
+				if( fort_red > 0 || village_red > 0 || branch_red > 0  ) {
 					$('#fall_check').show();
 				}
 				else {
@@ -5153,7 +5214,7 @@
 					$('#mapOverlayMap > area').each(function(){
 						var tmp2 = $(this).attr('onMouseOver').match(/'.*?'/g);
 						var href = $(this).attr('href').replace('land', 'map');
-						if( tmp2[13].match(/\/img\/panel\/fort_r/) || tmp2[13].match(/\/img\/panel\/village_r/) ) {
+						if( tmp2[13].match(/\/img\/panel\/fort_r/) || tmp2[13].match(/\/img\/panel\/village_r/) || tmp2[13].match(/\/img\/panel\/branch_r/) ) {
 							overlayOperationFM( tmp2, href );
 						}
 						
@@ -5210,7 +5271,7 @@
 				$('#mapOverlayMap > area').each(function(){
 					var tmp2 = $(this).attr('onMouseOver').match(/'.*?'/g);
 					var href = $(this).attr('href').replace('land', 'map');
-					if ( tmp2[13].match(/\/img\/panel\/capital_r_/) ) {
+					if ( tmp2[13].match(/\/img\/panel\/capital_r_/) || tmp2[13].match(/\/img\/panel\/castle_1_r/) || tmp2[13].match(/\/img\/panel\/castle_2_r/) || tmp2[13].match(/\/img\/panel\/castle_3_r/) || tmp2[13].match(/\/img\/panel\/castle_4_r/) ) {
 						overlayOperationL( tmp2, href );
 					}
 				});
@@ -5304,6 +5365,13 @@
 								.appendTo( Required_val );
 							}
 						
+						} else if ( options.chapter_change === '6') {
+						
+							if (tiles_text in POTENTIAL_LIST_6) {
+								$('<div id="ixamoko_zoommap">'+ POTENTIAL_LIST_6[tiles_text] +'</div>')
+								.appendTo( Required_val );
+								
+							}
 						} else if ( options.chapter_change === '5') {
 						
 							if (tiles_text in POTENTIAL_LIST_5_5) {
@@ -5809,12 +5877,15 @@
 					soldiertype['騎馬鉄砲'] = [67, 90, 72, 75];
 				}
 				if (options.def_kind_soldier[12]) {
-					soldiertype['破城鎚'] = [14, 7, 11, 9];
+					soldiertype['焙烙火矢'] = [77, 77, 77, 77];	//仮)焙烙火矢不明
 				}
 				if (options.def_kind_soldier[13]) {
-					soldiertype['攻城櫓'] = [22, 16, 11, 14];
+					soldiertype['破城鎚'] = [14, 7, 11, 9];
 				}
 				if (options.def_kind_soldier[14]) {
+					soldiertype['攻城櫓'] = [22, 16, 11, 14];
+				}
+				if (options.def_kind_soldier[15]) {
 					soldiertype['大筒兵'] = [69, 81, 108, 45];
 				}
 
@@ -6758,6 +6829,10 @@
 				if ( options.chapter_change === '0') {
 					if (tiles_text in POTENTIAL_LIST_4) {
 						$('#mokotool').append('<div class="normal"><h5>必要攻撃力</h5>'+ POTENTIAL_LIST_4[tiles_text] +'</div>');
+					}
+				} else if ( options.chapter_change === '6') {
+					if (tiles_text in POTENTIAL_LIST_6) {
+						$('#mokotool').append('<div class="normal"><h5>必要攻撃力</h5>'+ POTENTIAL_LIST_6[tiles_text] +'</div>');
 					}
 				} else if ( options.chapter_change === '5') {
 					if (tiles_text in POTENTIAL_LIST_5_5) {
@@ -7825,7 +7900,7 @@
 					}
 					name = lordName.join("");
 					var world = {'織田家': 1,'足利家': 2,'黒田家': 2,'武田家': 3,'上杉家': 4,'徳川家': 5,'毛利家': 6,'伊達家': 7,'浅井家': 7,
-						     '北条家': 8,'長宗我部家': 9,'島津家': 10,'豊臣家': 11,'大友家': 11,'最上家': 12,'石田家': 12};
+						     '北条家': 8,'今川家': 8,'長宗我部家': 9,'島津家': 10,'豊臣家': 11,'大友家': 11,'最上家': 12,'石田家': 12};
 					var worldNo = parseInt(world[$('.name').text()]);
 					$(this).parent().after(' <span style="font-weight: normal;font-size: 12px;">　' +
 						'<a href="/war/list.php?m=&s=1&name=lord&word='+name+'&coord=map&x=&y=">[合戦報告書]</a> ' +
@@ -8039,35 +8114,50 @@
 				if(location.pathname != "/facility/dungeon.php") return;
 				var sol_cnt = {};
 				var counter = 0;
-				var txt_cnt = '<tr><th class="moko-th">兵数</th>';
-				var txt_kind = '<tr><th class="moko-th">兵種</th>';
+				if(mainte > 20130503) { 
+					var txt_cnt = '<tr><th class="moko-th subhead">兵数</th>';
+					var txt_kind = '<tr><th class="moko-th subhead">兵種</th>';
+				}
+				else {
+					var txt_cnt = '<tr><th class="moko-th">兵数</th>';
+					var txt_kind = '<tr><th class="moko-th">兵種</th>';
+				}
 				var commandsol_hash = {
-						commandsol_yari1: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_ashigaru.png" alt="足軽">' ,
-						commandsol_yari2: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_ashigaru-spear.png" alt="長槍足軽">' ,
-						commandsol_yari3: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_bushi.png" alt="武士">' ,
-						commandsol_yari4: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_kunibito.png" alt="国人衆"</span>' ,
-						commandsol_yumi1: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_ashigary-bow.png" alt="弓足軽">' ,
-						commandsol_yumi2: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_longbow.png" alt="長弓兵">' ,
-						commandsol_yumi3: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_bowhorse.png" alt="弓騎馬">' ,
-						commandsol_yumi4: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_pirate.png" alt="海賊衆">' ,
-						commandsol_kiba1: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_houseporn.png" alt="騎馬兵">' ,
-						commandsol_kiba2: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_alitehorse.png" alt="精鋭騎馬">' ,
-						commandsol_kiba3: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_aka.png" alt="赤備え">' ,
-						commandsol_kiba4: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_omoi.png" alt="母衣衆">' ,
-						commandsol_heiki1: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_hummer.png" alt="破城鎚">' ,
-						commandsol_heiki2: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_castlehummer.png" alt="攻城櫓">' ,
-						commandsol_heiki3: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_bighorn.png" alt="大筒兵">' ,
-						commandsol_heiki4: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_shigaru-gun.png" alt="鉄砲足軽">' ,
-						commandsol_heiki5: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_gunhorse.png" alt="騎馬鉄砲">' ,
-						commandsol_heiki6: '<img src="http://cache.sengokuixa.jp/world/20110913-05/img/card/icon/icon_zatsuga.png" alt="雑賀衆">'
+						commandsol_yari1: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_yari1.gif" alt="足軽">' ,
+						commandsol_yari2: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_yari2.gif" alt="長槍足軽">' ,
+						commandsol_yari3: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_yari3.gif" alt="武士">' ,
+						commandsol_yari4: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_yari4.gif" alt="国人衆">' ,
+						commandsol_yumi1: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_yumi1.gif" alt="弓足軽">' ,
+						commandsol_yumi2: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_yumi2.gif" alt="長弓兵">' ,
+						commandsol_yumi3: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_yumi3.gif" alt="弓騎馬">' ,
+						commandsol_yumi4: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_yumi4.gif" alt="海賊衆">' ,
+						commandsol_kiba1: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_kiba1.gif" alt="騎馬兵">' ,
+						commandsol_kiba2: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_kiba2.gif" alt="精鋭騎馬">' ,
+						commandsol_kiba3: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_kiba3.gif" alt="赤備え">' ,
+						commandsol_kiba4: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_kiba4.gif" alt="母衣衆">' ,
+						commandsol_heiki1: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_heiki1.gif" alt="破城鎚">' ,
+						commandsol_heiki2: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_heiki2.gif" alt="攻城櫓">' ,
+						commandsol_heiki3: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_heiki3.gif" alt="大筒兵">' ,
+						commandsol_heiki4: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_heiki4.gif" alt="鉄砲足軽">' ,
+						commandsol_heiki5: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_heiki5.gif" alt="騎馬鉄砲">' ,
+						commandsol_heiki6: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_heiki6.gif" alt="雑賀衆">' ,
+						commandsol_heiki7: '<img src="http://cache.sengokuixa.jp/world/20130516-01/img/deck/br_job_heiki7.gif" alt="焙烙火矢">' 
 				};
-				$('table.table_waigintunit').find('tr:eq(1)').find('td:eq(0)').attr('rowspan','5');
+				if(mainte > 20130503) {
+					$('table.table_waigintunit').find('tr:eq(0)').find('td:eq(0)').attr('rowspan','5');
+					$('table.table_waigintunit').find('tr:eq(1)').find('td:eq(0)').attr('rowspan','4').css('background-color', '#808080');
+				}
+				else {
+					$('table.table_waigintunit').find('tr:eq(1)').find('td:eq(0)').attr('rowspan','5');
+				}
 				$('DIV[id^="cardWindow_"]').each(function() {
 					var cid = $(this).attr('id').substring(11);
-					txt_cnt += '<td><span>';
+					if(mainte > 20130503) { txt_cnt += '<td colspan="2" class="busho_name"><span>'; }
+					else {txt_cnt += '<td><span>';}
 					txt_cnt +=  $(this).find('div.cardfront').find('span.commandsol_no').find('SPAN[id^="card_commandsol_cnt_"]').text();
-					txt_cnt += '</span></td>';
-					txt_kind += '<td>';
+					txt_cnt += '人</span></td>';
+					if(mainte > 20130503) { txt_kind += '<td colspan="2" class="busho_name">'; }
+					else { txt_kind += '<td>'; }
 					var txt_kind_tmp = $(this).find('div.cardfront').find('div.parameta_area').find('SPAN[id^="card_commandsol_"]').attr('class');
 					txt_kind += commandsol_hash[txt_kind_tmp];
 					txt_kind += '</td>';
@@ -8108,9 +8198,17 @@
 							break;
 						}
 						if(sho_check.search(/-/) != -1){
-							for (i = counter%4; i < 3; i++) {
-								txt_cnt += '<td> - </td>';
-								txt_kind += '<td> - </td>';
+							if(mainte > 20130503) { 
+								for (i = counter%4; i < 3; i++) {
+									txt_cnt += '<td colspan="2" class="busho_name"> - </td>';
+									txt_kind += '<td colspan="2" class="busho_name"> - </td>';
+								}
+							}
+							else {
+								for (i = counter%4; i < 3; i++) {
+									txt_cnt += '<td> - </td>';
+									txt_kind += '<td> - </td>';
+								}
 							}
 							txt_cnt += '</tr>';
 							txt_kind += '</tr>';
@@ -8133,8 +8231,14 @@
 							default:
 								break;
 							}
-							txt_cnt = '<tr><th class="moko-th">兵数</th>';
-							txt_kind = '<tr><th class="moko-th">兵種</th>';
+							if(mainte > 20130503) { 
+								txt_cnt = '<tr><th class="moko-th subhead">兵数</th>';
+								txt_kind = '<tr><th class="moko-th subhead">兵種</th>';
+							}
+							else {
+								txt_cnt = '<tr><th class="moko-th subhead">兵数</th>';
+								txt_kind = '<tr><th class="moko-th subhead">兵種</th>';
+							}
 							counter+= (3-(counter%4));
 						}
 					} else {
@@ -8159,8 +8263,14 @@
 						default:
 							break;
 						}
-						txt_cnt = '<tr><th class="moko-th">兵数</th>';
-						txt_kind = '<tr><th class="moko-th">兵種</th>';
+						if(mainte > 20130503) { 
+							txt_cnt = '<tr><th class="moko-th subhead">兵数</th>';
+							txt_kind = '<tr><th class="moko-th subhead">兵種</th>';
+						}
+						else {
+							txt_cnt = '<tr><th class="moko-th">兵数</th>';
+							txt_kind = '<tr><th class="moko-th">兵種</th>';
+						}
 					}
 					counter++;
 				});
@@ -8994,6 +9104,7 @@
 								
 								if (options.width_display){
 									var Total = $('select.sortTotal').find('option:selected').val();
+									if( location.pathname == "/card/deck.php" ){ $('div.ig_decksection_top').remove(); };
 									if (options.width_display_mod == '0' && Total == 9)       { new_ig_decksection3.addClass('vertical_3'); }
 									else if (options.width_display_mod == '0' && Total == 12) { new_ig_decksection3.addClass('vertical_3'); }
 									else if (options.width_display_mod == '0' && Total == 15) { new_ig_decksection3.addClass('vertical_4'); }
@@ -9124,6 +9235,7 @@
 						cardNo == 2018 ||	//宮本武蔵
 						cardNo == 2019 ||	//佐々木小次郎
 						cardNo == 2040 ||	//柳生宗矩
+						cardNo == 2076 ||	//北畠具教
 						cardNo == 3001 ||	//上泉信綱
 						cardNo == 3029 ||	//宝蔵院胤栄
 						cardNo == 3039 ||	//草薙かさね
@@ -9141,22 +9253,42 @@
 						//console.log( 'No.' + cardNo + '/' + rea + '/' + '★' + rank + '/Lv.' + lv + '/剣豪 rate = ' + rate );
 					}
 					else {
-						//※特を基準に大凡の増減を加える。 天 = +25% 極 = +8.5% 上 = -8.5% 序 = -15%
-						//基本レートにランク1毎に +43 加算
-						if( rea == '天' ) {
-							rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) * 1.25 );
+						if(mainte > 20130503){
+							//※特を基準に大凡の増減を加える。 天 = +25% 極 = +8.5% 上 = -8.5% 序 = -15%
+							if( rea == '天' ) {
+								rate = Math.round( HPres_normal[lv] * 1.25 );
+							}
+							else if( rea == '極' ) {
+								rate = Math.round( HPres_normal[lv] * 1.085 );
+							}
+							else if( rea == '特' ) {
+								rate = Math.round( HPres_normal[lv] );
+							}
+							else if( rea == '上' ) {
+								rate = Math.round( HPres_normal[lv] * 0.915 );
+							}
+							else if( rea == '序' ) {
+								rate = Math.round( HPres_normal[lv] * 0.85 );
+							}
 						}
-						else if( rea == '極' ) {
-							rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) * 1.085 );
-						}
-						else if( rea == '特' ) {
-							rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) );
-						}
-						else if( rea == '上' ) {
-							rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) * 0.915 );
-						}
-						else if( rea == '序' ) {
-							rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) * 0.85 );
+						else{
+							//※特を基準に大凡の増減を加える。 天 = +25% 極 = +8.5% 上 = -8.5% 序 = -15%
+							//基本レートにランク1毎に +43 加算
+							if( rea == '天' ) {
+								rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) * 1.25 );
+							}
+							else if( rea == '極' ) {
+								rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) * 1.085 );
+							}
+							else if( rea == '特' ) {
+								rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) );
+							}
+							else if( rea == '上' ) {
+								rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) * 0.915 );
+							}
+							else if( rea == '序' ) {
+								rate = Math.round( (( rank * 43 ) + HPres_normal[lv]) * 0.85 );
+							}
 						}
 						//console.log( 'No.' + cardNo + '/' + rea + '/' + '★' + rank + '/Lv.' + lv + '/normal rate = ' + rate );
 					}
@@ -9170,6 +9302,7 @@
 						cardNo == 2018 ||	//宮本武蔵
 						cardNo == 2019 ||	//佐々木小次郎
 						cardNo == 2040 ||	//柳生宗矩
+						cardNo == 2076 ||	//北畠具教
 						cardNo == 3001 ||	//上泉信綱
 						cardNo == 3029 ||	//宝蔵院胤栄
 						cardNo == 3039 ||	//草薙かさね
@@ -9311,7 +9444,7 @@
 					var defense_yumi = $('div.ig_deck_smallcardarea:contains("鉄砲足軽"), .ig_deck_smallcardarea:contains("弓足軽"), .ig_deck_smallcardarea:contains("長弓兵"), .ig_deck_smallcardarea:contains("弓騎馬")');
 					var defense_kiba = $('div.ig_deck_smallcardarea:contains("鉄砲足軽"), .ig_deck_smallcardarea:contains("騎馬兵"), .ig_deck_smallcardarea:contains("精鋭騎馬"), .ig_deck_smallcardarea:contains("赤備え")');
 					var attack_hou = $('div.ig_deck_smallcardarea:contains("騎馬鉄砲"), .ig_deck_smallcardarea:contains("雑賀衆")');
-					var hakai_g = $('div.ig_deck_smallcardarea:contains("破城鎚"), .ig_deck_smallcardarea:contains("攻城櫓"), .ig_deck_smallcardarea:contains("大筒兵")');
+					var hakai_g = $('div.ig_deck_smallcardarea:contains("破城鎚"), .ig_deck_smallcardarea:contains("攻城櫓"), .ig_deck_smallcardarea:contains("大筒兵"), .ig_deck_smallcardarea:contains("焙烙火矢")');
 					
 					$('#all').click(function() {
 						$('div.ig_deck_smallcardarea').show();
@@ -9396,7 +9529,7 @@
 					yumi1:  "弓足軽"   , yumi2: "長弓兵"   , yumi3: "弓騎馬" , yumi4: "海賊衆" , 
 					kiba1:  "騎馬兵"   , kiba2: "精鋭騎馬" , kiba3: "赤備え" , kiba4: "母衣衆" , 
 					heiki1: "破城鎚"   , heiki2:"攻城櫓"   , heiki3:"大筒兵" , 
-					heiki4: "鉄砲足軽" , heiki5:"騎馬鉄砲" , heiki6:"雑賀衆" };
+					heiki4: "鉄砲足軽" , heiki5:"騎馬鉄砲" , heiki6:"雑賀衆",  heiki7:"焙烙火矢" };
 				var rank    = {
 					sss: 1.20, ss: 1.15, s: 1.10,
 					a: 1.05, b: 1, c: 0.95, d: 0.9, e: 0.85, f: 0.80,
@@ -9421,7 +9554,8 @@
 					"大筒兵"  :{typeno:335, off:10,def:12,mov: 8,des:20,tp1:"t3",tp2:"t4", cmd1:"yumi" ,cmd2:"heiki", drill:true , order:14},
 					"鉄砲足軽":{typeno:336, off:18,def:26,mov:15,des: 1,tp1:"t1",tp2:"t4", cmd1:"yari" ,cmd2:"heiki", drill:true , order:10},
 					"騎馬鉄砲":{typeno:337, off:26,def:18,mov:21,des: 1,tp1:"t2",tp2:"t4", cmd1:"kiba" ,cmd2:"heiki", drill:true , order:11},
-					"雑賀衆"  :{typeno:338, off:23,def:27,mov:18,des: 5,tp1:"t1",tp2:"t4", cmd1:"yari" ,cmd2:"heiki", drill:false, order:18},
+					"雑賀衆"  :{typeno:338, off:23,def:17,mov:18,des: 5,tp1:"t1",tp2:"t4", cmd1:"yari" ,cmd2:"heiki", drill:false, order:18},
+					"焙烙火矢"  :{typeno:345, off:23,def:23,mov:19,des: 2,tp1:"t3",tp2:"t4", cmd1:"yumi" ,cmd2:"heiki", drill:false, order:19},
 				};
 				
 				var attack_power = 0, defense_power = 0, destruct_power = 0 ;
@@ -10415,7 +10549,7 @@
 				if( groupSelect == 0 && showNum == 100 && btn_select.length == 1 ){
 					$('#title_00').after('<span id="max" style="float: right; color: white; margin: 18px 150px 0 0;">全カード最大指揮数：<span id="all_sol"></span></span>');
 					var val = 0;
-					$('div[id^="cardWindow"]').find('span.commandsol_no').each(function(){
+					$('div[id^="cardWindow"]').find('span[class^="commandsol_no"]').each(function(){
 						var max_sol = $(this).text().split('/')[1];
 						val += parseFloat( max_sol );
 						$('#all_sol').html(val);
@@ -10474,7 +10608,7 @@
 					});
 
 				//総兵数を表示
-				var type_list = {1: '足軽',2: '長槍足軽',3: '武士',4: '弓足軽',5: '長弓兵',6: '弓騎馬',7: '騎馬兵',8: '精鋭騎馬',9: '赤備え',10: '鉄砲足軽',11: '騎馬鉄砲',12: '破城鎚',13: '攻城櫓',14: '大筒兵',15: '国人衆',16: '海賊衆',17: '母衣衆',18: '雑賀衆'};
+				var type_list = {1: '足軽',2: '長槍足軽',3: '武士',4: '弓足軽',5: '長弓兵',6: '弓騎馬',7: '騎馬兵',8: '精鋭騎馬',9: '赤備え',10: '鉄砲足軽',11: '騎馬鉄砲',12: '焙烙火矢',13: '破城鎚',14: '攻城櫓',15: '大筒兵',16: '国人衆',17: '海賊衆',18: '母衣衆',19: '雑賀衆'};
 				if (options.unit_list_total) {
 					var tmp = '';
 					var total = 0;
@@ -10691,7 +10825,7 @@
 						足軽: '#F5DED5', 長槍足軽: '#F6CBBF', 武士: '#ECA896', 国人衆: '#FFA3A3',
 						弓足軽: '#E9D8F4', 長弓兵: '#DABDF8', 弓騎馬: '#BB93E2', 海賊衆: '#D6A1FF',
 						騎馬兵: '#F6DC8D', 精鋭騎馬: '#F8D165', 赤備え: '#E7BB43', 母衣衆: '#FDEC6D',
-						破城鎚: '#B5BEBC', 攻城櫓: '#7198B8', 大筒兵: '#798D9D', 鉄砲足軽: '#9E8680', 騎馬鉄砲: '#B1A178', 雑賀衆: '#ACAC4F'
+						破城鎚: '#B5BEBC', 攻城櫓: '#7198B8', 大筒兵: '#798D9D', 鉄砲足軽: '#9E8680', 騎馬鉄砲: '#B1A178', 焙烙火矢: '#86079E', 雑賀衆: '#ACAC4F'
 				};
 				
 				$.each( nowsol, function( sol, color ) {
@@ -10712,7 +10846,7 @@
 						'': '', 321: '#F5DED5', 322: '#F6CBBF', 323: '#ECA896', 324: '#FFA3A3',
 						325: '#E9D8F4', 326: '#DABDF8', 327: '#BB93E2', 328: '#D6A1FF',
 						329: '#F6DC8D', 330: '#F8D165', 331: '#E7BB43', 332: '#FDEC6D',
-						333: '#B5BEBC', 334: '#7198B8', 335: '#798D9D', 336: '#9E8680', 337: '#B1A178', 338: '#ACAC4F'
+						333: '#B5BEBC', 334: '#7198B8', 335: '#798D9D', 336: '#9E8680', 337: '#B1A178', 345: '#86079E', 338: '#ACAC4F'
 				};
 				
 				$.each( nowcolor, function( solnm, color ) {
@@ -11075,6 +11209,7 @@
 						'<div>' +
 							'<a id="teppou">鉄砲足軽</a>' +
 							'<a id="kibatetsu">騎馬鉄砲</a>' +
+							'<a id="horokuhiya">焙烙火矢</a>' +
 							'<a id="saika">雑賀衆</a>' +
 							'<a id="hajyou">破城鎚</a>' +
 							'<a id="kohjyou">攻城櫓</a>' +
@@ -11233,7 +11368,7 @@
 
 				$('#heiki').click(function() {
 					hidebox();
-					$('tr.tr_gradient').slice(1).filter(':has(div.force_type:has(img[alt="鉄砲足軽"], img[alt="騎馬鉄砲"], img[alt="雑賀衆"], img[alt="破城鎚"], img[alt="攻城櫓"], img[alt="大筒兵"]) )')
+					$('tr.tr_gradient').slice(1).filter(':has(div.force_type:has(img[alt="鉄砲足軽"], img[alt="騎馬鉄砲"], img[alt="焙烙火矢"], img[alt="雑賀衆"], img[alt="破城鎚"], img[alt="攻城櫓"], img[alt="大筒兵"]) )')
 					.show();
 					showCount();
 				});
@@ -11245,6 +11380,11 @@
 					$('#kibatetsu').click(function() {
 						hidebox();
 						$('tr.tr_gradient').slice(1).filter(':has(div.force_type:has(img[alt="騎馬鉄砲"]))').show();
+						showCount();
+					});
+					$('#horokuhiya').click(function() {
+						hidebox();
+						$('tr.tr_gradient').slice(1).filter(':has(div.force_type:has(img[alt="焙烙火矢"]))').show();
 						showCount();
 					});
 					$('#saika').click(function() {
@@ -11335,7 +11475,7 @@
 						tb_init('a.thickbox');
 					});
 					
-					$('#now_group_type').find('option:first').attr('label','ページ表示中の武将【不可】');
+					$('#now_group_type').find('option:first').remove();
 					
 					unitList_check();
 					unitListDefaultView();
@@ -12078,7 +12218,7 @@
 				if ( tmp[4] != "''" ) {
 					var tgTable = $('#quick_layer').find('tbody'),
 					    Country = center_href.split('=')[3],
-					    cc = {'織田家': 1,'足利家': 2,'黒田家': 2,'武田家': 3,'上杉家': 4,'徳川家': 5,'毛利家': 6,'伊達家': 7,'浅井家': 7,'北条家': 8,'長宗我部家': 9,'島津家': 10,'豊臣家': 11,'大友家': 11,'最上家': 12,'石田家': 12};
+					    cc = {'織田家': 1,'足利家': 2,'黒田家': 2,'武田家': 3,'上杉家': 4,'徳川家': 5,'毛利家': 6,'伊達家': 7,'浅井家': 7,'北条家': 8,'今川家': 8,'長宗我部家': 9,'島津家': 10,'豊臣家': 11,'大友家': 11,'最上家': 12,'石田家': 12};
 					
 					$('#box').one('click',function(){
 						$('#quick_layer').slideUp(200);
@@ -12528,7 +12668,7 @@
 							"弓足軽": {off: 10,def: 12,mov: 16,tp1: "t3",tp2: "t3"},"長弓兵": {off: 15,def: 17,mov: 18,tp1: "t3",tp2: "t3"},"弓騎馬": {off: 17,def: 19,mov: 23,tp1: "t2",tp2: "t3"},"海賊衆": {off: 16,def: 17,mov: 20,tp1: "t2",tp2: "t3"},
 							"騎馬兵": {off: 12,def: 10,mov: 22,tp1: "t2",tp2: "t2"},"精鋭騎馬": {off: 17,def: 15,mov: 23,tp1: "t2",tp2: "t2"},"赤備え": {off: 21,def: 20,mov: 25,tp1: "t1",tp2: "t2"},"母衣衆": {off: 19,def: 16,mov: 24,tp1: "t1",tp2: "t2"},
 							"破城鎚": {off: 3,def: 8,mov: 8,tp1: "t4",tp2: "t4"},"攻城櫓": {off: 14,def: 5,mov: 10,tp1: "t4",tp2: "t4"},"大筒兵": {off: 10,def: 12,mov: 8,tp1: "t3",tp2: "t4"},
-							"鉄砲足軽": {off: 18,def: 26,mov: 15,tp1: "t1",tp2: "t4"},"騎馬鉄砲": {off: 26,def: 18,mov: 21,tp1: "t2",tp2: "t4"},"雑賀衆": {off: 23,def: 17,mov: 18,tp1: "t1",tp2: "t4"},
+							"鉄砲足軽": {off: 18,def: 26,mov: 15,tp1: "t1",tp2: "t4"},"騎馬鉄砲": {off: 26,def: 18,mov: 21,tp1: "t2",tp2: "t4"},"焙烙火矢": {off: 23,def: 23,mov: 19,tp1: "t3",tp2: "t4"},"雑賀衆": {off: 23,def: 17,mov: 18,tp1: "t1",tp2: "t4"},
 						},
 						rank = {SSS: 1.20,SS: 1.15,S: 1.10,A: 1.05,B: 1,C: 0.95,D: 0.9,E: 0.85,F: 0.80}, check_list = [], tmp;
 					$('input[name^="id"]:checked').each(function() {
@@ -13056,7 +13196,7 @@
 													.replace(/弓足軽/, 20).replace(/長弓兵/, 21).replace(/弓騎馬/, 22).replace(/海賊衆/, 23)
 													.replace(/騎馬兵/, 30).replace(/精鋭騎馬/, 31).replace(/赤備え/, 32).replace(/母衣衆/, 33)
 													.replace(/破城鎚/, 40).replace(/攻城櫓/, 41).replace(/大筒兵/, 42)
-													.replace(/鉄砲足軽/, 50).replace(/騎馬鉄砲/, 51).replace(/雑賀衆/, 52);
+													.replace(/鉄砲足軽/, 50).replace(/騎馬鉄砲/, 51).replace(/焙烙火矢/, 52).replace(/雑賀衆/, 53);
 										},
 										// set type, either numeric or text
 										type: 'numeric'
@@ -13201,7 +13341,7 @@
 							sortkey = [],
 							i,
 							rarerity = { 1: '序', 2: '上', 3: '特', 4: '極', 5: '天', 'miyabi': '雅', 'iwai': '祝'},
-							commandsol = {'commandsol_yari1': '足軽','commandsol_yari2': '長槍足軽','commandsol_yari3': '武士','commandsol_yari4': '国人衆','commandsol_yumi1': '弓足軽','commandsol_yumi2': '長弓兵','commandsol_yumi3': '弓騎馬','commandsol_yumi4': '海賊衆','commandsol_kiba1': '騎馬兵','commandsol_kiba2': '精鋭騎馬','commandsol_kiba3': '赤備え','commandsol_kiba4': '母衣衆','commandsol_heiki1': '破城鎚','commandsol_heiki2': '攻城櫓','commandsol_heiki3': '大筒兵','commandsol_heiki4': '鉄砲足軽','commandsol_heiki5': '騎馬鉄砲','commandsol_heiki6': '雑賀衆','commandsol_': ''},
+							commandsol = {'commandsol_yari1': '足軽','commandsol_yari2': '長槍足軽','commandsol_yari3': '武士','commandsol_yari4': '国人衆','commandsol_yumi1': '弓足軽','commandsol_yumi2': '長弓兵','commandsol_yumi3': '弓騎馬','commandsol_yumi4': '海賊衆','commandsol_kiba1': '騎馬兵','commandsol_kiba2': '精鋭騎馬','commandsol_kiba3': '赤備え','commandsol_kiba4': '母衣衆','commandsol_heiki1': '破城鎚','commandsol_heiki2': '攻城櫓','commandsol_heiki3': '大筒兵','commandsol_heiki4': '鉄砲足軽','commandsol_heiki5': '騎馬鉄砲','commandsol_heiki6': '焙烙火矢','commandsol_heiki7': '雑賀衆','commandsol_': ''},
 							rank = {'SSS': 120,'SS': 115,'S': 110,'A': 105,'B': 100,'C': 95,'D': 90,'E': 85,'F': 80},
 							drank = {240: 'SSS',235: 'SS+',230: 'SS',225: 'S+',220: 'S',215: 'A+',210: 'A',205: 'B+',200: 'B',195: 'C+',190: 'C',185: 'D+',180: 'D',175: 'E+',170: 'E',165: 'F+',160: 'F'};
 						if (flg < 2) {
@@ -13467,7 +13607,7 @@
 														.replace(/弓足軽/, 20).replace(/長弓兵/, 21).replace(/弓騎馬/, 22).replace(/海賊衆/, 23)
 														.replace(/騎馬兵/, 30).replace(/精鋭騎馬/, 31).replace(/赤備え/, 32).replace(/母衣衆/, 33)
 														.replace(/破城鎚/, 40).replace(/攻城櫓/, 41).replace(/大筒兵/, 42)
-														.replace(/鉄砲足軽/, 50).replace(/騎馬鉄砲/, 51).replace(/雑賀衆/, 52);
+														.replace(/鉄砲足軽/, 50).replace(/騎馬鉄砲/, 51).replace(/焙烙火矢/, 52).replace(/雑賀衆/, 53);
 											},
 											// set type, either numeric or text
 											type: 'numeric'
@@ -13881,7 +14021,7 @@
 					.each(function() {
 						var base_view = $(this).text();
 						if( base_view == point_view ){
-							$(this).css({'text-decoration':'none', 'border-bottom':'1px solid red'});
+							$(this).css({'text-decoration':'none', 'border-bottom':'2px solid red'});
 						}
 					});
 				});
@@ -13930,7 +14070,6 @@
 								
 								if( enemy_ss == enemy_point ){
 									var villageID = $(this).attr('href');
-									$(this).css({'text-decoration':'none', 'border-bottom':'2px solid red'});
 									if(villageID == undefined){
 										location.href = slot + '&select_card_group=' + groupNo;
 									}
@@ -14055,7 +14194,7 @@
 
 			//全体格付テーブル表示補正
 			$(function () {
-				if (location.pathname !="/user/ranking.php")
+				if (location.pathname !="/user/ranking.php" && location.pathname !="/alliance/list.php")
 					return;
 				$('.common_box3bottom').find('.common_table1.center')
 				.find('strong').css({'display':'inline-block', 'width':'5em'});
@@ -16288,7 +16427,7 @@
 			'li[class^="btn_category_"] > div.menu_list > a:hover, #branch_ul div > a:hover, #change_menu > a:hover { background-position: 0 -30px; color: #E2E2E2; }' +
 			'div[class^="pulldown_"]:hover, li[class^="ｍovedeck_"]:hover, #yari:hover, #yumi:hover, #kiba:hover, #heiki:hover, a.now_branch:hover { box-shadow: 0 2px 0px #8D7225; }' +
 			/*地図国移動プルダウンメニュー*/
-			'#change_menu { display: none; width:170px; position: absolute; left: 88px; top: 37px; z-index: 100; border-top: 1px solid #AC902B; }' +
+			'#change_menu { display: none; width:143px; position: absolute; left: 88px; top: 37px; z-index: 100; border-top: 1px solid #AC902B; }' +
 			'#change_menu > a { width: auto; padding: 3px 15px; }' +
 			/*部隊編成:pager*/
 			'#bar_card .pager { padding: 2px 0 3px; width: 385px; top: 12px; }' +
@@ -16408,6 +16547,7 @@
 			'.moko-th { font-family: MS PMincho; font-weight: normal; text-shadow: black 1px 1px 2px, black -1px -1px 2px; }' +
 			'.family_nowrank { width: 106px; }' +
 			'#mokotool > .common_table1 th, #mokotool > .common_table1 td { line-height: 1.1 }' +
+			'#ig_battle_rank_search.team_search .ig_battle_ranksearch_btnarea { width: 215px; }' +
 			/*市：最大取引*/
 			'#maxsol_total th, #maxsol_total td { border-top: 1px solid #76601d; }' +
 			'#maxsol_total th { padding: 8px; }' +
@@ -16436,7 +16576,7 @@
 			'#soldiers_blind_list > li { float: left; }' +
 			'#soldiers_blind_list > li > a { cursor: pointer; display: block; width: 34px; text-align: center; padding: 6px 0; margin: 0 2px; background-color: black; color: white; border:1px solid #685826; }' +
 			'#soldiers_blind_list > li > a:hover { background-color: #725E1E; }' +
-			'#soldiers_blind_list li > div { display: none; position: absolute; z-index: 100; margin: -1px 0 0 2px; background-color: black; color: white; border:1px solid #685826; }' +
+			'#soldiers_blind_list li > div { display: none; position: absolute; z-index: 100; margin: -1px 0 0 -14px; background-color: black; color: white; border:1px solid #685826; }' +
 			'#soldiers_blind_list li > div > a { cursor: pointer; display: block; padding: 8px 0; width: 65px; text-align: center; }' +
 			'#soldiers_blind_list li > div > a:hover { background-color: #725E1E; }' +
 			/**/
